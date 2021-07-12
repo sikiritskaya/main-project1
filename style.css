@@ -122,13 +122,13 @@ header .plus{
 }
 .second-container{
     display: flex;
-    margin-left: 320px;
     margin-right: 0;
 }
 .second-container .left-side{
     width: 40%;
-    padding-top: 109px;
-    padding-right: 71px;
+    margin-top: 109px;
+    margin-right: 71px;
+    margin-left: 320px;
 }
 .second-container .left-side h1{
     font-size: 36px;
@@ -200,11 +200,12 @@ header .plus{
     color: #535353;
 }
 .catalog__main .catalog__main-left a:first-child{
-    margin-bottom: 11px;
+    margin-bottom: 11px;  
+}
+.catalog__main .catalog__main-left a:active{
     color: #FFC94F;
     font-size: 16px;
     line-height: 24px;
-    
 }
 .catalog__main .catalog__main-left a:last-child{
     margin-bottom: 150px;
