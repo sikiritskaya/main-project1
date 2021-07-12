@@ -170,13 +170,13 @@ header .plus{
     margin-top: 88px;
 }
 
-.catalog__main h1, .services h1{
+.catalog__main h1, .services h1, .new__goods h1{
     font-size: 30px;
     font-weight: 800;
     line-height: 40px;
     margin-bottom: 64px;
 }
-.catalog__main h1::before, .services h1::before {
+.catalog__main h1::before, .services h1::before, .new__goods h1::before {
     content: " ";
     background: #FFC94F;
     width: 5px;
@@ -310,15 +310,184 @@ header .plus{
     width: 90%;
     background-color: rgba(229, 229, 229, 1);
 }
+.new__goods{
+    margin-top: 90px;
+}
+.new__goods .goods{
+    margin-top: 43px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.new__goods .goods .goods-example{
+    width: 302px;
+    height: 596px;
+    background-color: #ffffff;
+    border:solid 1px #EAEAEA;
+    
 
+}
+.new__goods .goods .goods-example:hover{
+    box-shadow: 0px 0px 30px 0px #FFC94F4D;
+}
+.new__goods .goods .goods-example:hover .summa{
+    color:#FFC94F;
+    background-image: url(./images/rublyellow.png);
+}
+.new__goods .goods .goods-example:hover .goods-bottom{
+    background-color: #EFEFEF;
+    
+}
+.new__goods .goods .goods-example .day{
+    padding: 3px 14px;
+    background-color: #FFC94F;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
 
+}
+.new__goods .goods .goods-example .first-pic{
+    margin-right: 26px;
+    margin-left: 20px;
+}
+.new__goods .goods .goods-example .first-pic img{
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-top: 88px;
+    margin-bottom: 64px;
 
+}
+.new__goods .goods h3{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    padding-bottom: 13px;
+}
+.new__goods .goods .goods-example li{
+    list-style: disc;
+    color:#FFC94F;
+} 
+.new__goods .goods .goods-example li span{
+    color: #535353;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+
+}
+.new__goods .goods .goods-example .summa{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 21px;
+    background-image: url(./images/rubl.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 85px;
+    margin-top: 16px;
+    margin-bottom: 58px;
+    
+}
+.new__goods .goods .goods-example .goods-bottom{
+    width: 100%;
+    margin: 0;
+    border-top:solid 1px #EAEAEA;
+    
+}
+.new__goods .goods .goods-example .goods-bottom .button3{
+    text-decoration: none;
+    color:#ffffff;
+    font-size: 14px;
+    padding:26px 76px;
+    font-weight: 600;
+    line-height: 45px;
+    background-color: #3D4F64;
+    
+
+}
+.new__goods .goods .goods-example .goods-bottom img{
+    margin: 0;
+}
+.new__goods .goods .goods-example .second-pic{
+    margin-left: 21px;
+    margin-right: 20px;
+}
+.new__goods .goods .goods-example .second-pic img{
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-top: 23px;
+    margin-bottom: 44px;
+    max-height: 181px;
+    padding-left: 70px;
+}
+.new__goods .button4{
+    text-align: center;
+    margin-top: 81px;
+    margin-bottom: 34px;
+}
+.new__goods .button4 a{
+    display: inline-block;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+    padding: 14px 36px;
+    color:#535353;
+    text-decoration: none;
+    background-color: #FFC94F;
+    border-radius: 2px;
+}
+.question{
+    margin-left: 413px;
+    /* margin-right: 549px; */
+}
+.question .question-form{
+    background-image: url(./images/ask.png);
+    background-repeat: no-repeat;
+    width: 958px;
+    height: 258px;
+    display: flex;
+   
+}
+.question .question-form .feedback-left{
+    width: 50%;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 34px;
+    text-align: end;
+    padding-top: 56px;
+}
+.question .question-form .feedback-right{
+    width: 50%;
+    padding-top: 32px;
+    padding-left: 114px;
+    
+}
+.question .question-form .feedback-right input, .question .question-form .feedback-right textarea{ /* не понимаю зачем эти свойства*/
+    width: 100%;
+    border: none;
+    background: #FCFCFC;
+    padding: 0;
+
+}
+.question .question-form .feedback-right input, .question .question-form .feedback-right textarea{
+    margin: 0;
+    padding-top:23px;
+    border-bottom: solid 1px #EFEFEF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    
+}
 
 
  
 .last-container{
     background-color: #3D4F64;
+    margin-top: 98px;
 }
+
 .last-container .basement{
     display: grid;
     padding-top: 51px;
