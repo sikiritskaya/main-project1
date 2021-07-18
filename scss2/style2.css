@@ -1,0 +1,218 @@
+/*RESET.CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*END RESET.CSS*/
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #535353;
+  background-color: #FCFCFC;
+}
+
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.center {
+  max-width: 1285px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.company__page .white {
+  background-color: #ffffff;
+}
+
+.company__page .white .white-height {
+  height: 49px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15px;
+}
+
+.company__page .white .white-height a {
+  text-decoration: none;
+  color: #7C7C7C;
+}
+
+.company__page .company__info h2 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 40px;
+  margin-top: 38px;
+  margin-bottom: 45px;
+}
+
+.company__page .company__info .company-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.company__page .company__info .company-menu ul a {
+  text-decoration: none;
+  color: #535353;
+  padding: 18px 35px;
+  height: 100%;
+}
+
+.company__page .company__info .company-menu ul a:hover {
+  color: #ffffff;
+  background-color: #3D4F64;
+  font-weight: 700;
+}
+
+.company__page .company__info .company-menu p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.company__page .company__info .company__main-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.company__page .company__info .company__main-all .company__main-left {
+  width: 325px;
+  margin-right: 23px;
+  margin-bottom: 116px;
+}
+
+.company__page .company__info .company__main-all .company__main-left h1 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 40px;
+  margin-top: 20px;
+  margin-bottom: 31px;
+}
+
+.company__page .company__info .company__main-all .company__main-left .left {
+  width: 100%;
+  border-bottom: 1px solid #EFEFEF;
+  position: relative;
+}
+
+.company__page .company__info .company__main-all .company__main-left .left a {
+  text-decoration: none;
+  color: #535353;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  display: inline-block;
+  padding: 14px 20px;
+}
+
+.company__page .company__info .company__main-all .company__main-left .left a:hover {
+  background-color: #3D4F64;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+}
+
+.company__page .company__info .company__main-all .company__main-left .left a:hover:after {
+  content: url("../images/Arrow.svg");
+  color: #ffffff;
+  right: 20px;
+  position: absolute;
+}
+
+.company__page .company__info .company__main-all .company__main-right {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  max-width: 962px;
+  background-image: url("../images/company.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 76%;
+}
+
+.company__page .company__info .company__main-all .company__main-right .box1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 /span 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 /span 2;
+}
+
+.company__page .company__info .company__main-all .company__main-right div {
+  border: solid 12px #FCFCFC;
+}
+/*# sourceMappingURL=style2.css.map */

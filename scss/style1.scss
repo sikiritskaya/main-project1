@@ -1,6 +1,6 @@
 /*RESET.CSS*/
 
- html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -45,11 +45,34 @@ table {
 } 
 
 /*END RESET.CSS*/
-
+$color_text: #535353;
+$background_color: #FCFCFC;
+$font: 'Montserrat', sans-serif;
+$color_menu: #ffffff;
+$color_orange: #FFC94F;
+@mixin a_menu($color_menu){
+    text-decoration: none;
+    color: $color_menu;
+    
+}
+@mixin a_button($color_text){
+    text-decoration: none;
+    color: $color_text;
+}
+@mixin text_menu() {
+    line-height: 17px;
+    font-size: 14px;
+    font-weight: 500;
+}
+@mixin button_text() {
+    line-height: 17px;
+    font-size: 14px;
+    font-weight: 700;
+}
 body{
-    font-family: 'Montserrat', sans-serif;
-    color: #535353;
-    background-color: #FCFCFC;
+    font-family: $font;
+    color: $color_text;
+    background-color: $background_color;
 }
 .wrapper{
 	max-width: 1920px;
@@ -75,6 +98,7 @@ header .logo{
 }
 header ul{
     display: flex;
+    max-width: 683px;
     width: 683px;
     justify-content: space-between;
     align-items: center;
@@ -83,42 +107,50 @@ header ul{
     margin-right: 9px;
 }
 header ul li a{
-    text-decoration: none;
-    line-height: 17px;
-    font-size: 14px;
-    font-weight: 500;
-    color:#ffffff;
+    @include a_menu($color_menu);
+    @include text_menu();
 }
 header ul li:first-child a{
+    
+    margin:0;
+}
+header ul li:active a{
     font-weight: 700;
 }
 header ul li:last-child a{
     font-weight: 700;
-    color:#FFC94F;
+    color:$color_orange;
+   
 }
 header .plus{
     padding-right: 40px;
     display: inline-block;
+    padding-left: 12px;
 }
-.first-container .envelope span{
-    margin-left: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 17px;
-
+.first-container{
+     .envelope {
+        display: flex;
+        span{
+            margin-left: 8px;
+            @include text_menu();
+            margin-right: 12px;
+        }
+    }
 }
 .first-container a{
-    text-decoration: none;
-    color: #ffffff;
-    margin-left: 12px;
+    @include a_menu($color_menu);
+    
+    
 }
-.first-container .call{
-    border: solid 1px #ffffff;
-    padding: 13px 23px 14px 31px;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 17px;
-
+.first-container{ 
+    .call{
+        border: solid 1px $color_menu;
+        padding: 13px 23px 14px 31px;
+        @include text_menu();
+        img{
+            padding-right: 12px;
+        }
+    }
 }
 .second-container{
     display: flex;
@@ -138,7 +170,7 @@ header .plus{
 
 }
 .second-container .left-side h1 span{
-    color: #FFC94F;
+    color: $color_orange;
 }
 .second-container .left-side p{
     font-size: 14px;
@@ -146,25 +178,37 @@ header .plus{
     line-height: 22px;
     padding-bottom: 21px;
 }
+.second-container{
+    .right-side{
+        .slash{
+            margin:0;
+            bottom:-29px;
+            .color{
+                background-color: $color_orange;
+                width: 33%;
+                
+            }
+        }
+    }
+}
 .button{
     padding: 13px 55px;
-    background-color: #FFC94F;
+    background-color: $color_orange;
     border-radius: 2px;
     display: inline-block;
 }
 .button a{
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 17px;
-    color: #535353;
+    @include a_button($color_text);
+    @include button_text();
+    
 }
 .second-container .right-side{
     width: 70%;
 
 }
 .second-container .right-side .pose{
-    margin-top: -300px;
+    object-fit: cover;
+    height: 448px;
 }
 .catalog__main{
     margin-top: 88px;
@@ -178,7 +222,7 @@ header .plus{
 }
 .catalog__main h1::before, .services h1::before, .new__goods h1::before {
     content: " ";
-    background: #FFC94F;
+    background: $color_orange;
     width: 5px;
     height: 25px;
     float: left;
@@ -190,20 +234,21 @@ header .plus{
 }
 .catalog__main .catalog__main-left{
     width: 23%;
+    max-width: 287px;
 }
 .catalog__main .catalog__main-left a{
+    @include a_button($color_text);
     font-weight: 700;
-    display: inline-block;
-    text-decoration: none;
     font-size: 14px;
     line-height: 22px;
-    color: #535353;
+    display: inline-block;
+    
 }
 .catalog__main .catalog__main-left a:first-child{
     margin-bottom: 11px;  
 }
 .catalog__main .catalog__main-left a:active{
-    color: #FFC94F;
+    color: $color_orange;
     font-size: 16px;
     line-height: 24px;
 }
@@ -221,7 +266,7 @@ header .plus{
     padding: 13px 69px;
     line-height: 17px;
     background-color: #3D4F64;
-    color: #ffffff;
+    color: $color_menu;
     margin-bottom: 46px;
 }
 .catalog__main .catalog__main-left hr{
@@ -231,7 +276,7 @@ header .plus{
 .catalog__main .catalog__main-right{
     display: grid;
     width: 77%;
-    background-image: url("./images/catalog.jpg");
+    background-image: url("../images/catalog.jpg");
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
     height: 518px;
@@ -239,7 +284,7 @@ header .plus{
     margin-left: 18px;
 }
 .catalog__main .catalog__main-right div{
-    border: solid 12px #FCFCFC;
+    border: solid 12px $background_color;
 }
 .catalog__main .catalog__main-right .box1{
     grid-row: 1/ span 2;
@@ -249,11 +294,17 @@ header .plus{
 .catalog__main .catalog__main-right p{
     position: absolute;
     bottom: 0;
-    padding: 5px 20px 9px 24px;
+    padding: 5px 20px 5px 24px;
     background-color: rgba(255, 255, 255, 1);  
     font-size: 14px;
     font-weight: 600;
     line-height: 24px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.catalog__main .catalog__main-right p:hover{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 
 }
 .catalog__main .catalog__main-right p a{
@@ -270,48 +321,6 @@ header .plus{
 .services{
     margin-top: 69px;
 }
-.services .services-example{
-    display: flex;
-    margin-bottom: 12px;
-}
-.services .services-example .icon{
-    width: 10%;
-}
-.services .services-example .icon-descr, .services .services-example .plus-yellow{
-    border-bottom: 1px solid rgba(229, 229, 229, 1);
-    padding-bottom: 27px;
-}
-.services .services-example .icon-descr h2{
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 40px;
-}
-.services .services-example .icon-descr p{
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-
-}
-.services .services-example .icon-descr{
-    width: 79%;
-}
-.services .services-example .plus-yellow{
-    width: 11%;
-    text-align: right;
-}
-/* .services .services-example .plus-yellow:first-child img{
-    transform: rotate(45deg); 
-}*/
-.services .services-accord{
-    display: flex;
-}
-.services .services-accord .icon{
-    width: 10%;
-}
-.services .services-accord .services-accord-descr{
-    width: 90%;
-    background-color: rgba(229, 229, 229, 1);
-}
 .new__goods{
     margin-top: 90px;
 }
@@ -324,16 +333,17 @@ header .plus{
 .new__goods .goods .goods-example{
     width: 302px;
     height: 596px;
-    background-color: #ffffff;
+    background-color: $color_menu;
     border:solid 1px #EAEAEA;
-    
+    margin-bottom: 81px;
 
 }
 .new__goods .goods .goods-example:hover{
     box-shadow: 0px 0px 30px 0px #FFC94F4D;
 }
+
 .new__goods .goods .goods-example:hover .summa{
-    color:#FFC94F;
+    color:$color_orange;
     background-image: url(./images/rublyellow.png);
 }
 .new__goods .goods .goods-example:hover .goods-bottom{
@@ -342,7 +352,7 @@ header .plus{
 }
 .new__goods .goods .goods-example .day{
     padding: 3px 14px;
-    background-color: #FFC94F;
+    background-color: $color_orange;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -368,10 +378,10 @@ header .plus{
 }
 .new__goods .goods .goods-example li{
     list-style: disc;
-    color:#FFC94F;
+    color: $color_orange;
 } 
 .new__goods .goods .goods-example li span{
-    color: #535353;
+    color: $color_text;
     font-size: 14px;
     font-weight: 300;
     line-height: 21px;
@@ -394,21 +404,26 @@ header .plus{
     width: 100%;
     margin: 0;
     border-top:solid 1px #EAEAEA;
-    
+    display: flex;
+    align-items: center;
 }
 .new__goods .goods .goods-example .goods-bottom .button3{
     text-decoration: none;
-    color:#ffffff;
+    color:$color_menu;
     font-size: 14px;
-    padding:26px 76px;
+    padding:25px 76px;
     font-weight: 600;
-    line-height: 45px;
     background-color: #3D4F64;
     
 
 }
+.new__goods .goods .goods-example .goods-bottom .plus_goods{
+    width: 100%;
+    text-align: center;
+}
 .new__goods .goods .goods-example .goods-bottom img{
     margin: 0;
+    
 }
 .new__goods .goods .goods-example .second-pic{
     margin-left: 21px;
@@ -425,30 +440,86 @@ header .plus{
 }
 .new__goods .button4{
     text-align: center;
-    margin-top: 81px;
     margin-bottom: 34px;
 }
 .new__goods .button4 a{
     display: inline-block;
-    font-size: 14px;
+    @include button_text();
     font-style: normal;
-    font-weight: 700;
-    line-height: 17px;
     padding: 14px 36px;
-    color:#535353;
-    text-decoration: none;
-    background-color: #FFC94F;
+    @include a_button($color_text);
+    background-color: $color_orange;
     border-radius: 2px;
 }
+.download{
+    margin-top: 34px;
+    background-image: url(../images/file.png);
+    background-repeat: no-repeat;  
+    background-position-x: 255px;
+        .download-form{
+            display: flex;
+            width: 100%;
+            .download-left{
+                font-size: 20px;
+                font-weight: 800;
+                line-height: 24px;
+                padding-top: 61px;
+                width: 33%;
+            }
+            .download-right{
+                padding-top: 39px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(3, 1fr);
+                width: 100%;
+                /* max-width: 896px; */
+                line-height: 45px;
+                font-size: 14px;
+                /* &::after{
+                    
+                } */
+                .download-info{
+                    border-bottom: solid 1px;
+                    font-style: normal;
+                    font-weight: 500;
+                   /*   &:last-child{    
+                    opacity: 30%;
+                } */   /* не получается записать */
+                }
+                .download-file{
+                    border-bottom: solid 1px;
+                    text-align: end;
+                    a{
+                        @include a_button($color_text);
+                        font-weight: 700;   
+                    }
+                    .download-look{
+                        padding-right: 20px;
+                        &:hover{
+                           color: $color_orange;
+                        }
+                    }
+                    img{
+                        padding-left: 12px;
+                    }
+                }
+            }
+    }
+}
+/* .download .download-form .download-right:last-child .download-info{
+    opacity: 30%;
+} */
 .question{
-    margin-left: 413px;
+    width: 100%;
+    max-width: 958px;
+    margin: 0 auto;
     /* margin-right: 549px; */
+    margin-top: 20px;
 }
 .question .question-form{
-    background-image: url(./images/ask.png);
+    background-image: url(../images/ask.png);
     background-repeat: no-repeat;
-    width: 958px;
-    height: 258px;
+    /* height: 258px; */
     display: flex;
    
 }
@@ -469,7 +540,7 @@ header .plus{
 .question .question-form .feedback-right input, .question .question-form .feedback-right textarea{ /* не понимаю зачем эти свойства*/
     width: 100%;
     border: none;
-    background: #FCFCFC;
+    background: $background_color;
     padding: 0;
 
 }
@@ -477,13 +548,22 @@ header .plus{
     margin: 0;
     padding-top:23px;
     border-bottom: solid 1px #EFEFEF;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17px;
+    @include text_menu();
     
 }
 .question .question-form .feedback-right textarea{
     margin-bottom: 40px;
+}
+.question .question-form .feedback-right .button0 input{
+    border: none;
+    text-align: end;
+    padding: 0;
+    @include button_text();
+    color:$color_text;
+    width: auto;
+    background-color: $color_orange;
+    padding: 13px 66px;
+    /* не знаюкак подвинуть в конец */
 }
 
 
@@ -494,10 +574,28 @@ header .plus{
 }
 
 .last-container .basement{
-    display: grid;
+    display: flex;
     padding-top: 51px;
-    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
     color: #ffffff;
+    flex-wrap: wrap;
+    height: 301px;
+}
+.last-container{
+    .basement{
+        .logo2{
+            width: 25%;
+        }
+        .goods{
+            width: 25%;
+        }
+        .inform{
+            width: 25%;
+        }
+        .contact{
+            width: 25%;
+        }
+    }
 }
 .last-container .basement .logo2 a{
     padding-bottom: 24px;
@@ -507,7 +605,7 @@ header .plus{
     font-size: 11px;
     font-weight: 500;
     line-height: 18px;
-    margin-bottom: 163px;
+    
 }
 .last-container .basement .goods ul{
     list-style-type: none; /*почему появились диски?*/
@@ -525,7 +623,7 @@ header .plus{
     padding-bottom: 7px;
     display: inline-block;
 }
-.last-container .basement .goods ul li:nth-child(2) a{
+.last-container .basement .goods ul li:hover a{
     color:#FFC94F;
     text-decoration: underline;
 }
@@ -552,5 +650,60 @@ header .plus{
 .last-container .basement .contact ul li:first-child{
     font-weight: 600;
 }
+.last-container .basement .contact ul li{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
 
+}
+.services{
+            /* .picture{
+                &::before{
+                    content: url('../images/icon1.png');
+                }
+            } */
+            .crest{
+                background-color: #FCFCFC;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 40px;
+                &:not(.collapsed){
+                   color: $color_text;
+                   &::after{
+                    transform: rotate(45deg);
+                   }
+                }
+                .icon-descr{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        padding-right: 53px;
+                    }
+                }
+            }
+            
+            .crest::after{
+                background-image: url('../images/cres1.png');
+                background-size: auto;
+            }
+            .color_boby{
+                background-color: #FCFCFC;
+            }
+            .inside{
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                padding-left: 115px;
+            }
+        
+    
+}  
+
+@media screen and (max-width: 1200px){
+
+}
+@media screen and (max-width: 1024px){
+
+}
 

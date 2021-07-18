@@ -1,0 +1,207 @@
+/*RESET.CSS*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+
+/*END RESET.CSS*/
+$color_text: #535353;
+$background_color: #FCFCFC;
+$font: 'Montserrat', sans-serif;
+$color_menu: #ffffff;
+$color_orange: #FFC94F;
+@mixin a_menu($color_menu){
+    text-decoration: none;
+    color: $color_menu;
+    
+}
+@mixin a_button($color_text){
+    text-decoration: none;
+    color: $color_text;
+}
+@mixin text_menu() {
+    line-height: 17px;
+    font-size: 14px;
+    font-weight: 500;
+}
+body{
+    font-family: $font;
+    color: $color_text;
+    background-color: $background_color;
+}
+.wrapper{
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+}
+.center{
+    max-width: 1285px;
+    width: 100%;
+    margin: 0 auto;
+ } 
+ .company__page{
+    .white{
+        background-color: $color_menu;
+        .white-height{
+            height: 49px;
+            align-items: center;
+            font-family: $font;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 15px;
+            a{
+                text-decoration: none;
+                color:#7C7C7C;
+            }
+        }
+    }
+    .company__info{
+        h2{
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 40px;
+            margin-top: 38px;
+            margin-bottom: 45px;
+        }
+        .company-menu{
+            ul{
+                display: flex;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 40px;
+                align-items: center;
+                margin-bottom: 20px;
+                a{
+                    @include a_button($color_text);
+                    padding:  18px 35px;
+                    height: 100%;
+                }
+                a:hover{
+                    color:$color_menu;
+                    background-color: #3D4F64;
+                    font-weight: 700;
+                }
+            }
+            p{
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 24px;
+
+            }
+        }
+       
+        .company__main-all{
+            display: flex;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            .company__main-left{
+                width: 325px;
+                margin-right: 23px;
+                margin-bottom: 116px;
+                h1{
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: 40px;
+                    margin-top: 20px;
+                    margin-bottom: 31px;
+        
+                }
+                .left{
+                    width: 100%;
+                    border-bottom: 1px solid #EFEFEF;
+                    position: relative;
+                    a{
+                        @include a_button($color_text);
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 22px;
+                        display: inline-block;
+                        padding: 14px 20px;
+                        &:hover{
+                            background-color: #3D4F64; 
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 24px;
+                            height: 100%;
+                            width: 100%;
+                            color: $color_menu;
+                            &:after{
+                                content: url('../images/Arrow.svg');
+                                color: $color_menu;
+                                right: 20px;
+                                position: absolute;
+                            }
+                        }
+                        
+                    }   
+                }   
+            }
+            .company__main-right{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                max-width: 962px;
+                background-image: url('../images/company.jpg');
+                background-size: cover;
+                background-position: center;
+                width: 76%;
+                .box1{
+                    grid-column: 1 /span 3;
+                    grid-row: 1 /span 2;
+
+                }
+                div{
+                    border: solid 12px $background_color;
+                }
+                
+            }
+        }
+    }
+ }
