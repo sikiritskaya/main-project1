@@ -108,14 +108,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
+  border-bottom: solid #EDEDED;
 }
 
 .company__page .company__info .company-menu ul a {
   text-decoration: none;
   color: #535353;
-  padding: 18px 35px;
+  padding: 6px 35px;
   height: 100%;
+  display: inline-block;
 }
 
 .company__page .company__info .company-menu ul a:hover {
@@ -129,6 +130,7 @@ body {
   font-style: normal;
   font-weight: 300;
   line-height: 24px;
+  margin-top: 20px;
 }
 
 .company__page .company__info .company__main-all {
@@ -214,5 +216,20 @@ body {
 
 .company__page .company__info .company__main-all .company__main-right div {
   border: solid 12px #FCFCFC;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .company__page .company__info .company__main-all {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .company__page .company__info .company__main-all .company__main-left {
+    width: 40%;
+  }
+  .company__page .company__info .company__main-all .company__main-right {
+    height: 60vh;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 /*# sourceMappingURL=style2.css.map */
