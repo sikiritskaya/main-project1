@@ -128,15 +128,17 @@ header .plus{
     padding-left: 12px;
 }
 .first-container{
-     .envelope {
-        display: flex;
-        img{
-            object-fit: contain;
-        }
-        span{
-            margin-left: 8px;
-            @include text_menu();
-            margin-right: 12px;
+    header{
+        .envelope {
+            display: flex;
+            img{
+                object-fit: contain;
+            }
+            span{
+                margin-left: 8px;
+                @include text_menu();
+                margin-right: 12px;
+            }
         }
     }
 }
@@ -811,6 +813,23 @@ header .plus{
 
     
 }  
+#burger{
+    display: none;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    /* margin-top: 10px; */
+    right: 0;
+    top: 15px;
+    i{
+        display: block;
+        width: 50px;
+        height: 3px;
+        margin: 5px;
+        background-color: $color_menu;
+    }
+}
+
 
 @media screen and (max-width: 1399.98px){
     
@@ -952,12 +971,21 @@ header .plus{
 @media screen and (max-width: 991.98px){
     .first-container{
         header{
+            position: relative;
             .logo{
                 padding: 0;
             }
-            ul{
+            .menu{
                 display: none;
             }
+            .show{
+                display: block;
+               /*  min-height: 100vh;
+                background: rgba(0,0,0,0.8);
+                z-index: 1;
+                width: 100%;
+                position: absolute; */
+                }
             .plus{
                 display: none;
             }
@@ -966,6 +994,9 @@ header .plus{
             }
             .call{
                 display: none;
+            }
+            #burger{
+                display: block;
             }
         }
     }

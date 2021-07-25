@@ -465,6 +465,9 @@ body{
                 border-bottom: none;
                 li{
                     border-bottom: solid #EDEDED;
+                    a{
+                        display: block;
+                    }
                 }
                 
             }

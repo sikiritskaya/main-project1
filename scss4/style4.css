@@ -479,6 +479,9 @@ body {
   .goods-descr .goods-menu .menu-pages li {
     border-bottom: solid #EDEDED;
   }
+  .goods-descr .goods-menu .menu-pages li a {
+    display: block;
+  }
   .goods-descr .goods-menu p {
     display: none;
   }
