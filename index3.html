@@ -18,24 +18,30 @@
                 <a href="#" class="logo">
                     <img src="./images/logo.png">
                 </a>
-                <ul>
-                    <li><a href="#">О компании </a></li>
+                <ul class="menu">
+                    <li><a href="./index2.html">О компании </a></li>
                     <li><a href="#">Услуги</a></li>
                     <li><a href="#">Проекты</a></li>
                     <li><a href="#">Доставка и оплата</a></li>
                     <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Подборка </a></li>
-                </ul>
-                <a href="#" class="plus">
-                    <img src="./images/plus.png">
-                </a>
-                <a href="mailto: info@i-lights.ru" title="Написать нам" class="envelope" >
-                    <img src="./images/email.png"> <span>info@i-lights.ru
-                    </span>
-                </a>
-                <div class="call">
-                    <img src="./images/Phone 1.png"><a href="tel:+7(495)2335557" title="Позвонить">+7(495)2335557</a>
-                </div>
+                    <li><a href="#" class="plus"><span>Подборка</span>
+                        <img src="./images/plus.png"></a></li>
+                    <li><a href="mailto: info@i-lights.ru" title="Написать нам" class="envelope" >
+                        <img src="./images/email.png"> <span>info@i-lights.ru</span></a>
+                    </li>
+                   <li><div class="call">
+                        <img src="./images/Phone 1.png"><a href="tel:+7(495)2335557" title="Позвонить">+7(495)2335557</a>
+                    </div></li> 
+                    </ul>
+                <span id="burger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+                <span id="close">
+                    <i class="fas fa-times"></i>
+                </span>
             </header>
         </div>
     </div>
@@ -66,28 +72,41 @@
                         <div class="filtr-flex">
                             <h3>Фильтр</h3><img src="./images/filtr.svg">
                         </div>
-                        <p>Мощность</p>
-                        <div class="filtr-flex">
-                            <span>44</span><span>432</span>  
+                        <label for="power">Мощность</label>
+                        <div class="range">
+                        <output for ="power" id="meaning">44</output>
+                        <input type="range" id = "power" min="2" max="432" value="44" step="4" onchange="outputUpdate(value)"> <!-- oninput="changeColor()" -->
+                        <output for ="power" id="end">432</output>
                         </div>
-                        <input type="range" class="form-range">
-                        <p>Световой поток LED</p>
-                        <div class="filtr-flex">
-                            <span>6110</span><span>53820</span>  
+                         <label for="light">Световой поток LED</label>
+                        <div class="range">
+                        <output for ="light" id="val">6110</output>
+                        <input type="range" id = "light" min="2" max="53820"  value="6110" step="10" onchange="document.getElementById('val').innerHTML = this.value;">
+                        <output for ="light" id = "end">53820</output>
+                        </div> 
+                        <label for ="ugol">Угол рассеивания</label>
+                        <div class="range">
+                            <output for ="ugol" id="ugolVal">15</output>
+                            <input type="range" id="ugol" min="2" max="160" value="15" step="1" onchange="document.getElementById('ugolVal').innerHTML = this.value;">
+                            <output for ="ugol" id = "end">160</output>
+                        </div> 
+                        <label for ="price">Минимальная цена</label>
+                        <div class="range">
+                            <output for ="price" id="minPrice">2500</output>
+                            <input type="range" id="price" min="1400" max="10575" value="2500" step="25" onchange="document.getElementById('minPrice').innerHTML = this.value;">
+                            <output for ="price" id = "end">10575</output>
                         </div>
-                        <input type="range" class="form-range">
-                        <p>Угол рассеивания</p>
-                        <div class="filtr-flex">
-                            <span>15</span><span>160</span>  
+                        <div class="submitBtn">
+                            <button type="submit" class="submit">Сбросить</button>
+                            <button type="submit" class="submit">Применить</button>
                         </div>
-                        <input type="range" class="form-range">
-                        <p>Минимальная цена</p>
-                        <div class="filtr-flex">
-                            <span>2500</span><span>10575</span>  
-                        </div>
-                        <input type="range" class="form-range">
                     </form>
+                   
                 </div>
+                <span class="filtr_form">Фильтр<img src ="./images/filtr.svg"></span>
+                <span id="close_form">
+                    <i class="fas fa-times"></i>
+                </span>
                 <div class="goods">
                     <h1>Новинки</h1>
                         <div class="goods-example">
@@ -297,10 +316,11 @@
 
 
 
-
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

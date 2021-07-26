@@ -39,47 +39,51 @@ header .logo{
     padding-right: 84px;
     align-self: flex-start;
 }
-header ul{
+header .menu{
     display: flex;
-    max-width: 683px;
-    width: 683px;
+    max-width: 100%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     margin: 0;
     padding: 0;
-    margin-right: 9px;
+    /* margin-right: 9px; */
 }
-header ul li a{
+header .menu li a{
     @include a_menu($color_menu);
     @include text_menu();
 }
-header ul li:first-child a{
+header .menu li:first-child a{
     
     margin:0;
 }
-header ul li:active a{
+header .menu li:active a{
     font-weight: 700;
 }
-header ul li:last-child a{
+header .menu li:nth-child(6) a{
     font-weight: 700;
     color:$color_orange;
    
 }
 header .plus{
-    padding-right: 40px;
-    display: inline-block;
-    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    img{
+        padding-left: 12px;
+    }   
 }
 .first-container{
-     .envelope {
-        display: flex;
-        img{
-            object-fit: contain;
-        }
-        span{
-            margin-left: 8px;
-            @include text_menu();
-            margin-right: 12px;
+    header{
+        .envelope {
+            display: flex;
+            img{
+                object-fit: contain;
+            }
+            span{
+                margin-left: 8px;
+                @include text_menu();
+                /* margin-right: 12px; */
+            }
         }
     }
 }
@@ -89,12 +93,14 @@ header .plus{
     
 }
 .first-container{ 
-    .call{
-        border: solid 1px $color_menu;
-        padding: 13px 23px 14px 31px;
-        @include text_menu();
-        img{
-            padding-right: 12px;
+    header{
+        .call{
+            border: solid 1px $color_menu;
+            padding: 13px 23px 14px 31px;
+            @include text_menu();
+            img{
+                padding-right: 12px;
+            }
         }
     }
 }
@@ -187,6 +193,34 @@ header .plus{
     line-height: 30px;
 }
 
+#burger{
+    display: none;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    /* margin-top: 10px; */
+    right: 0;
+    top: 15px;
+    i{
+        display: block;
+        width: 50px;
+        height: 3px;
+        margin: 5px;
+        background-color: $color_orange;
+    }
+}
+#close{
+    display: none;
+    right: 20px;
+    position: fixed;
+    z-index: 4;
+    i{
+        font-size: 30px;
+        color: $color_orange;
+    }
+
+}
+
 
 
 @media screen and (max-width: 1399.98px){
@@ -194,14 +228,7 @@ header .plus{
     .first-container{
         header{
             justify-content: space-between;
-            .logo{
-                padding-right: 35px;
-            }
-            .plus{
-                padding-right: 37px;
-            }
             .envelope{
-                padding-right: 10px;
                 span{
                     display: none;
                 }
@@ -211,6 +238,7 @@ header .plus{
             }
         }
     }
+
 
     .center{
         width: 90%;
@@ -222,7 +250,7 @@ header .plus{
             .call{
                 padding: 0;
                 border: none;
-                padding-left: 10px;
+               
                 img{
                     padding: 0;
                 }
@@ -236,26 +264,83 @@ header .plus{
 @media screen and (max-width: 991.98px){
     .first-container{
         header{
+            position: relative;
             .logo{
                 padding: 0;
             }
-            ul{
+            .menu{
                 display: none;
             }
-            .plus{
-                display: none;
+            .show{
+                justify-content: space-around;
+                display: flex;
+                position: fixed;
+                width: 100%;
+                text-align: center;
+                background: #0C0537;
+                top: 0;
+                height: 70vh;
+                z-index: 1;
+                flex-direction: column;
+                /* padding-bottom: 20%;
+                padding-top: 5%; */
+                max-width: 100%;
+                 li{
+                     a{
+                        line-height: 40px;
+                        font-size: 16px;
+                        font-weight: 700;
+                     }
+                    &:nth-child(7){
+                        padding-top: 4%;
+                        border-top: solid 1px $color_text;
+                        width: 100%;
+                    }
+                } 
+            } 
+         
+            .envelope_show{
+                display: flex;
+                width: 100%;
+                z-index: 2;
+                justify-content: center;
+                top: 39%;
+                padding-right: 0;
+                span{
+                    display: block;
+                    margin-right: 0;
+                }
             }
-            .envelope{
+            
+           /*  .call{
                 display: none;
+            } */
+            .call_show{
+                border: solid 1px $color_menu;
+                padding: 13px 23px 14px 31px;
+                display: flex;
+                width: 100%;
+                z-index: 3;
+                justify-content: center;
+                top: 43%;
+                padding-left: 0;
+                img{
+                    padding-right: 12px;
+                    padding-left: 29px;
+                }
+                a{
+                    display: block;
+                }
+
             }
-            .call{
-                display: none;
+            #burger{
+                display: block;
             }
         }
     }
-    .center{
+   /*  .center{
         width: 95%;
-    }
+    } */
     .last-container{
         position: relative;
         .basement{

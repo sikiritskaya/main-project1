@@ -143,6 +143,133 @@ body {
 .new__goods .goods-flex .filtr form {
   width: 100%;
   background-color: #ffffff;
+  padding: 20px;
+}
+
+.new__goods .goods-flex .filtr form label {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.new__goods .goods-flex .filtr form .range {
+  position: relative;
+  /* min-height: 33px; */
+}
+
+.new__goods .goods-flex .filtr form .range output {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+.new__goods .goods-flex .filtr form .range input[type=range] {
+  position: absolute;
+  width: 85%;
+  bottom: 0;
+  -webkit-appearance: none;
+}
+
+.new__goods .goods-flex .filtr form .range input[type=range]::-webkit-slider-runnable-track {
+  border-radius: 10px;
+  height: 1px;
+  /* background-color: #EAEAEA; */
+  background: -webkit-linear-gradient(left, #FFC94F 0%, #FFC94F 10%, #EAEAEA 10%, #EAEAEA 100%);
+}
+
+.new__goods .goods-flex .filtr form .range input[type=range]::-moz-range-progress {
+  background-color: #FFC94F;
+}
+
+.new__goods .goods-flex .filtr form .range input[type=range]::-ms-fill-lower {
+  background-color: #FFC94F;
+}
+
+.new__goods .goods-flex .filtr form .range input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #FFC94F;
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: -6px;
+  -webkit-box-shadow: 0px 0px 4px 0px #FFC94F;
+          box-shadow: 0px 0px 4px 0px #FFC94F;
+}
+
+.new__goods .goods-flex .filtr form .range input[type=range]::-moz-range-track {
+  border-radius: 10px;
+  height: 1px;
+  background-color: #EAEAEA;
+}
+
+.new__goods .goods-flex .filtr form .range input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  background-color: #FFC94F;
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: -5px;
+  box-shadow: 0px 0px 4px 0px #FFC94F;
+}
+
+.new__goods .goods-flex .filtr form .range input[type=range]::-ms-track {
+  border-radius: 10px;
+  height: 1px;
+  background-color: #EAEAEA;
+}
+
+.new__goods .goods-flex .filtr form .range input[type=range]::-ms-thumb {
+  -webkit-appearance: none;
+  background-color: #FFC94F;
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: -5px;
+  box-shadow: 0px 0px 4px 0px #FFC94F;
+}
+
+.new__goods .goods-flex .filtr form .range #end {
+  position: absolute;
+  right: 0;
+}
+
+.new__goods .goods-flex .filtr form .submitBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+}
+
+.new__goods .goods-flex .filtr form .submitBtn .submit {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  padding-left: 21px;
+  padding-right: 24px;
+  background-color: #fff;
+  color: #535353;
+  border: 1px solid #E5E5E5;
+}
+
+.new__goods .goods-flex .filtr form .submitBtn .submit:hover {
+  background-color: #FFC94F;
+}
+
+.new__goods .goods-flex .filtr form .submitBtn .submit:active {
+  background-color: #FFC94F;
+}
+
+.new__goods .goods-flex .filtr form .submitBtn .submit:focus {
+  background-color: #FFC94F;
 }
 
 .new__goods .goods-flex .filtr form .filtr-flex {
@@ -159,20 +286,6 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 40px;
-}
-
-.new__goods .goods-flex .filtr form .filtr-flex span {
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 15px;
-}
-
-.new__goods .goods-flex .filtr form p {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
   line-height: 40px;
 }
 
@@ -219,7 +332,7 @@ body {
 
 .new__goods .goods .goods-example:hover .summa {
   color: #FFC94F;
-  background-image: url(./images/rublyellow.png);
+  background-image: url("../images/rublyellow.png");
 }
 
 .new__goods .goods .goods-example:hover .goods-bottom {
@@ -274,7 +387,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 21px;
-  background-image: url(./images/rubl.png);
+  background-image: url("../images/rubl.png");
   background-repeat: no-repeat;
   background-position: right center;
   width: 85px;
@@ -364,17 +477,36 @@ body {
   color: #535353;
 }
 
+.filtr_form {
+  display: none;
+}
+
+#close_form {
+  display: none;
+  right: 5%;
+  position: absolute;
+  z-index: 1;
+}
+
+#close_form i {
+  font-size: 30px;
+  color: #FFC94F;
+}
+
 @media screen and (max-width: 1399.98px) {
-  .new__goods .goods .goods-example {
+  .new__goods .goods-flex .filtr form {
+    padding: 10px;
+  }
+  .new__goods .goods-flex .goods .goods-example {
     position: relative;
     width: 32%;
     padding-bottom: 58px;
   }
-  .new__goods .goods .goods-example .goods-bottom {
+  .new__goods .goods-flex .goods .goods-example .goods-bottom {
     position: absolute;
     bottom: 0;
   }
-  .new__goods .goods .goods-example .goods-bottom .button3 {
+  .new__goods .goods-flex .goods .goods-example .goods-bottom .button3 {
     padding: 25px 26%;
   }
 }
@@ -387,9 +519,25 @@ body {
   .new__goods .goods-flex .filtr {
     width: 50%;
     max-width: 100%;
+    margin-left: 50%;
+    display: none;
   }
   .new__goods .goods-flex .filtr form {
-    padding: 20px 20px;
+    padding: 20px;
+  }
+  .new__goods .goods-flex .filtr form .submitBtn {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .new__goods .goods-flex .filtr_form {
+    display: block;
+    width: 100%;
+    text-align: end;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .new__goods .goods-flex .filtr_form img {
+    padding-left: 15px;
   }
 }
 
@@ -406,6 +554,7 @@ body {
   }
   .new__goods .goods-flex .filtr {
     width: 100%;
+    margin-left: 0;
   }
   .new__goods .goods-flex .goods .goods-example {
     width: 48%;
@@ -419,9 +568,9 @@ body {
   .new__goods .goods-flex {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-  .new__goods .goods-flex .filtr {
-    display: none;
+    /* .filtr{
+                    display: none;
+                } */
   }
   .new__goods .goods-flex .goods .goods-example {
     width: 100%;

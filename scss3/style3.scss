@@ -144,6 +144,116 @@ body{
             form{
                 width: 100%;
                 background-color: $color_menu;
+                padding: 20px;
+                label{
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 40px;
+                }
+                .range{
+                    position: relative;
+                    /* min-height: 33px; */
+                   
+                    output{
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 40px;
+                    }
+                    input[type=range]{
+                        position: absolute;
+                        width: 85%;
+                        bottom: 0;
+                        -webkit-appearance: none;
+                        &::-webkit-slider-runnable-track {
+                            border-radius: 10px;
+                            height: 1px;
+                            /* background-color: #EAEAEA; */
+                            background: -webkit-linear-gradient(left, $color_orange 0%, $color_orange 10%, #EAEAEA 10%, #EAEAEA 100%);
+                        }
+                        &::-moz-range-progress {
+                            background-color: $color_orange;
+                        }
+                        &::-ms-fill-lower {
+                            background-color: $color_orange;
+                        }
+                        &::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            background-color: $color_orange;
+                            width: 13px;
+                            height: 13px;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            margin-top: -6px;
+                            box-shadow: 0px 0px 4px 0px #FFC94F;
+                        }
+                        &::-moz-range-track{
+                            border-radius: 10px;
+                            height: 1px;
+                            background-color: #EAEAEA;
+                        }
+                        &::-moz-range-thumb{
+                            -webkit-appearance: none;
+                            background-color: $color_orange;
+                            width: 13px;
+                            height: 13px;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            margin-top: -5px;
+                            box-shadow: 0px 0px 4px 0px #FFC94F;
+                        }
+                        &::-ms-track {
+                            border-radius: 10px;
+                            height: 1px;
+                            background-color: #EAEAEA;
+                        }
+                        &::-ms-thumb{
+                            -webkit-appearance: none;
+                            background-color: $color_orange;
+                            width: 13px;
+                            height: 13px;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            margin-top: -5px;
+                            box-shadow: 0px 0px 4px 0px #FFC94F;
+                        }
+
+                        
+
+                    }
+                    #end{
+                        position: absolute;
+                        right: 0;
+                    }
+
+                }
+                .submitBtn{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 30px;
+                    .submit{
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 40px;
+                        padding-left: 21px;
+                        padding-right: 24px;
+                        background-color: #fff;
+                        color: $color_text;
+                        border: 1px solid #E5E5E5;
+                        &:hover{
+                            background-color: $color_orange;
+                        }
+                        &:active{
+                            background-color: $color_orange;
+                        }
+                        &:focus{
+                            background-color: $color_orange;
+                        }
+
+                    }
+                }
                 .filtr-flex{
                     display: flex;
                     width: 100%;
@@ -155,18 +265,7 @@ body{
                         line-height: 40px;
 
                     }
-                    span{
-                        font-size: 12px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 15px;
-                    }
-                }
-                p{
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 40px;
+                   
                 }
                 
             }   
@@ -211,7 +310,7 @@ body{
 
 .new__goods .goods .goods-example:hover .summa{
     color:$color_orange;
-    background-image: url(./images/rublyellow.png);
+    background-image: url('../images/rublyellow.png');
 }
 .new__goods .goods .goods-example:hover .goods-bottom{
     background-color: #EFEFEF;
@@ -261,7 +360,7 @@ body{
     font-size: 20px;
     font-weight: 700;
     line-height: 21px;
-    background-image: url(./images/rubl.png);
+    background-image: url('../images/rubl.png');
     background-repeat: no-repeat;
     background-position: right center;
     width: 85px;
@@ -334,23 +433,43 @@ body{
         }
     }
 } 
-
+.filtr_form{
+    display: none;
+}
+#close_form{
+    display: none;
+    right: 5%;;
+    position: absolute;
+    z-index: 1;
+    i{
+        font-size: 30px;
+        color: $color_orange;
+    }
+}
 @media screen and (max-width: 1399.98px){
     .new__goods{
-        .goods{
-            .goods-example{
-                position: relative;
-                width: 32%;
-                padding-bottom: 58px;
-                .goods-bottom{
-                    position: absolute;
-                    bottom: 0;
-                    .button3{
-                        padding: 25px 26%;
+        .goods-flex{
+            .filtr{
+                form{
+                    padding: 10px;
+                }
+            }
+            .goods{
+                .goods-example{
+                    position: relative;
+                    width: 32%;
+                    padding-bottom: 58px;
+                    .goods-bottom{
+                        position: absolute;
+                        bottom: 0;
+                        .button3{
+                            padding: 25px 26%;
+                        }
                     }
                 }
             }
         }
+
     }
 }
 @media screen and (max-width: 1199.98px){
@@ -360,8 +479,23 @@ body{
             .filtr{
                 width: 50%;
                 max-width: 100%;
+                margin-left: 50%;
                 form{
-                    padding: 20px 20px;
+                    padding: 20px;
+                    .submitBtn{
+                        justify-content: space-around;
+                    }
+                }
+                display: none;
+            }
+            .filtr_form{
+                display: block;
+                width: 100%;
+                text-align: end;
+                font-size: 12px;
+                font-weight: 500;
+                img{
+                    padding-left: 15px;
                 }
             }
         }
@@ -382,6 +516,7 @@ body{
                 flex-wrap: wrap;
                 .filtr{
                     width: 100%;
+                    margin-left: 0;
 
                 }
                     .goods{
@@ -403,9 +538,9 @@ body{
     .new__goods{     
         .goods-flex{
                 flex-wrap: wrap;
-                .filtr{
+                /* .filtr{
                     display: none;
-                }
+                } */
                 .goods{
                     .goods-example{
                         width: 100%;
