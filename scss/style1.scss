@@ -157,6 +157,7 @@ header .plus{
             @include text_menu();
             img{
                 padding-right: 12px;
+                object-fit: contain;
             }
         }
     }
@@ -997,6 +998,7 @@ header .plus{
                 height: 70vh;
                 z-index: 1;
                 flex-direction: column;
+                left: 0;
                 /* padding-bottom: 20%;
                 padding-top: 5%; */
                 max-width: 100%;
@@ -1042,6 +1044,7 @@ header .plus{
                 img{
                     padding-right: 12px;
                     padding-left: 29px;
+                    object-fit: contain;
                 }
                 a{
                     display: block;

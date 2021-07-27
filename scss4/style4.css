@@ -197,6 +197,7 @@ body {
   line-height: 40px;
   width: 100%;
   max-width: 153px;
+  min-width: 153px;
 }
 
 .products .specification .spec_descr p:nth-child(4) {
@@ -231,6 +232,19 @@ body {
 .products .specification .spec_descr form .spec:active {
   color: #535353;
   font-weight: 500;
+  border-color: #FFC94F;
+}
+
+.products .specification .spec_descr form .spec:focus {
+  color: #535353;
+  font-weight: 500;
+  border-color: #FFC94F;
+}
+
+.products .specification .spec_descr form .spec:checked {
+  color: #535353;
+  font-weight: 500;
+  border-color: #FFC94F;
 }
 
 .products .specification .button {
@@ -457,6 +471,9 @@ body {
   .products .specification .spec_descr {
     max-width: 100%;
   }
+  .products .specification .button {
+    text-align: center;
+  }
   .table-descr .table thead {
     font-size: 9px;
     font-weight: 600;
@@ -496,6 +513,40 @@ body {
   }
   .table-descr a {
     display: none;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .products .page_number {
+    width: 100%;
+  }
+  .products .page_number .navi .navi_page {
+    /* почему не работает */
+  }
+  .products .page_number .navi .navi_page:last-child {
+    display: none;
+  }
+  .products .page_number .navi .navi_page .navi_a img {
+    max-width: 75px;
+  }
+  .products .specification .button {
+    width: 100%;
+  }
+  .products .specification .button a {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .products .page_number .navi .navi_page .navi_a img {
+    max-width: 60px;
+  }
+  .products .specification .button a {
+    line-height: 20px;
+    padding-bottom: 6px;
+    padding-top: 6px;
   }
 }
 /*# sourceMappingURL=style4.css.map */

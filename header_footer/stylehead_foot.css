@@ -309,6 +309,7 @@ header .plus img {
     /* padding-bottom: 20%;
                 padding-top: 5%; */
     max-width: 100%;
+    left: 0;
   }
   .first-container header .show li a {
     line-height: 40px;

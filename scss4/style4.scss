@@ -176,6 +176,7 @@ body{
                 line-height: 40px;
                 width: 100%;
                 max-width: 153px;
+                min-width: 153px;
                 &:nth-child(4){
                     line-height: 20px;
                 }
@@ -443,6 +444,9 @@ body{
             .spec_descr{
                 max-width: 100%;
             }
+            .button{
+                text-align: center;
+            }
         }
 
     }
@@ -502,6 +506,67 @@ body{
         a{
             display: none;
         }
+    }
+
+}
+@media screen and (max-width: 575.98px){
+    .products{
+        .page_number{
+            width: 100%;
+            .navi{
+                .navi_page{
+                    &:last-child{
+                        display: none;
+                    } /* почему не работает */
+                    .navi_a{
+                        img{
+                            max-width: 75px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .specification{
+            .button{
+                width: 100%;
+                a{
+                    width: 100%;
+                    text-align: center;
+                    font-size: 14px;
+
+                }
+            }
+        }
+    }
+
+
+    
+}
+@media  screen and (max-width: 375px){
+    .products{
+        .page_number{
+            .navi{
+                .navi_page{
+                    .navi_a{
+                        img{
+                            max-width: 60px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .specification{
+            .button{
+                a{
+                    line-height: 20px;
+                    padding-bottom: 6px;
+                    padding-top: 6px;
+                }
+            }
+        }
+   
     }
 
 }
