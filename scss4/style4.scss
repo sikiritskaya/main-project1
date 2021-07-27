@@ -204,6 +204,17 @@ body{
                     &:active{
                         color:$color_text;
                         font-weight: 500;
+                        border-color: $color_orange;
+                    }
+                    &:focus{
+                        color:$color_text;
+                        font-weight: 500;
+                        border-color: $color_orange;
+                    }
+                    &:checked{
+                        color:$color_text;
+                        font-weight: 500;
+                        border-color: $color_orange;
                     }
                 }     
             }
