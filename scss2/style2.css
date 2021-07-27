@@ -125,12 +125,24 @@ body {
   font-weight: 700;
 }
 
-.company__page .company__info .company-menu p {
+.company__page .company__info .company-menu .content {
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
   line-height: 24px;
   margin-top: 20px;
+}
+
+.company__page .company__info .company-menu .card2 {
+  display: none;
+}
+
+.company__page .company__info .company-menu .card3 {
+  display: none;
+}
+
+.company__page .company__info .company-menu .card4 {
+  display: none;
 }
 
 .company__page .company__info .company__main-all {
@@ -274,7 +286,7 @@ body {
     padding: 6px 35px;
     display: block;
   }
-  .company__page .company__info .company-menu p {
+  .company__page .company__info .company-menu .card1 {
     display: none;
   }
   .company__page .company__info .company__main-all {
